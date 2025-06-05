@@ -36,10 +36,10 @@ Deployment: (I'm looking at the best fit)
 ### Prerequisites
 Make sure you have the following installed:
 
-- [Node.js][https://nodejs.org/]
-- [Python 3.12x][https://www.python.org/]
-- [pip][https://pypi.org/project/pip/]
-- [Git][https://git-scm.com/]
+- [Node.js](https://nodejs.org/)
+- [Python 3.12x](https://www.python.org/)
+- [pip](https://pypi.org/project/pip/)
+- [Git](https://git-scm.com/)
 
 ### Installation steps
 #### 1. Clone the repository:
