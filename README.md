@@ -54,7 +54,7 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
-#### backend will be available at: localhost:8000
+#### backend will be available at http://localhost:8000.
 
 #### 3. Setup Frontend (React):
 ```bash
