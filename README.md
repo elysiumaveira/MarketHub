@@ -17,19 +17,19 @@ Responsive design for all devices
 I use a powerful combination of modern web technologies to ensure high performance, scalability, and maintainability:
 
 ### 🔹 Frontend (React)
-Framework: React.js
-State Management: (I'm looking at the best fit)
-Routing: React Router DOM
-UI Library: Material UI
-HTTP Client: Axios
-Build Tool: (I'm looking at the best fit)
+- Framework: React.js
+- State Management: (I'm looking at the best fit)
+- Routing: React Router DOM
+- UI Library: Material UI
+- HTTP Client: Axios
+- Build Tool: (I'm looking at the best fit)
 
 ### 🔹 Backend (Django)
-Framework: Django + Django REST Framework (DRF)
-Database: (I'm looking at the best fit)
-Authentication: (I'm looking at the best fit)
-API Documentation: (I'm looking at the best fit)
-Deployment: (I'm looking at the best fit)
+- Framework: Django + Django REST Framework (DRF)
+- Database: (I'm looking at the best fit)
+- Authentication: (I'm looking at the best fit)
+- API Documentation: (I'm looking at the best fit)
+- Deployment: (I'm looking at the best fit)
 
 ## 🚀 Getting Started
 
