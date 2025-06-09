@@ -37,7 +37,7 @@ I use a powerful combination of modern web technologies to ensure high performan
 Make sure you have the following installed:
 
 - [Node.js](https://nodejs.org/)
-- [Python 3.12x](https://www.python.org/)
+- [Python 3.13x](https://www.python.org/)
 - [pip](https://pypi.org/project/pip/)
 - [Git](https://git-scm.com/)
 
