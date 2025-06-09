@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # 🛒 MarketHub
 A modern and scalable e-commerce platform built with React (frontend) and Django (backend). Perfect for buyers and sellers to connect and trade products online. 
 
@@ -65,6 +64,3 @@ npm run dev
 ```
 
 #### Now the app should be running at http://localhost:3000.
-=======
-# MarketHub
->>>>>>> 203753c57574b4d8e5de7fd5830fa9975695bb92
