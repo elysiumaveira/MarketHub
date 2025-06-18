@@ -17,8 +17,8 @@ Responsive design for all devices
 I use a powerful combination of modern web technologies to ensure high performance, scalability, and maintainability:
 
 ### 🔹 Frontend (React)
-- Framework: React.js
-- State Management: (I'm looking at the best fit)
+- Framework: React.js + Vite
+- State Management: Redux Toolkit
 - Routing: React Router DOM
 - UI Library: Material UI
 - HTTP Client: Axios
