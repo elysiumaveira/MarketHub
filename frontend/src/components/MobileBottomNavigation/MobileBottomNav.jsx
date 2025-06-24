@@ -2,9 +2,9 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
 import CustomBottomNavigation from './MobileBottomNav.styles'
+import CustomBottomNavigationAction from './BottomNavigationAction.styles'
 
 import {
-    BottomNavigationAction, 
     useMediaQuery, 
 } from '@mui/material'
 import { useTheme } from '@mui/material/styles'
@@ -24,55 +24,30 @@ export default function MobileBottomNav() {
 
     return (
         <CustomBottomNavigation value={value} onChange={(event, value) => {setValue(newValue)}} showLabels>
-                <BottomNavigationAction
+                <CustomBottomNavigationAction
                     label='Главная'
                     icon={<HomeIcon fontSize='large' />}
                     onClick={()=>navigate('/')}
-                    sx={{
-                        padding:0,
-                        height: 56,
-                        width: 86
-                    }}
                 />
-                <BottomNavigationAction
+                <CustomBottomNavigationAction
                     label='Избранное'
                     icon={<FavoriteIcon fontSize='large' />}
                     onClick={()=>navigate('/')}
-                    sx={{
-                        padding:0,
-                        height: 56,
-                        width: 86
-                    }}
                 />
-                <BottomNavigationAction
+                <CustomBottomNavigationAction
                     label='Мои объяв.'
                     icon={<MenuIcon fontSize='large' />}
                     onClick={()=>navigate('/')}
-                    sx={{
-                        padding:0,
-                        height: 56,
-                        width: 86
-                    }}
                 />
-                <BottomNavigationAction
+                <CustomBottomNavigationAction
                     label='Сообщения'
                     icon={<TextsmsIcon fontSize='large' />}
                     onClick={()=>navigate('/')}
-                    sx={{
-                        padding:0,
-                        height: 56,
-                        width: 86
-                    }}
                 />
-                <BottomNavigationAction
+                <CustomBottomNavigationAction
                     label='Профиль'
                     icon={<PersonIcon fontSize='large' />}
                     onClick={() => navigate('/')}
-                    sx={{
-                        padding:0,
-                        height: 56,
-                        width: 86
-                    }}
                 />
         </CustomBottomNavigation>
     )
