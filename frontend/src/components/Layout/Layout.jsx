@@ -1,9 +1,9 @@
-import { React, useState } from 'react'
+import { useState } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 
 import { useTheme } from '@mui/material/styles'
-import { useMediaQuery, } from '@mui/material'
 import { 
+    useMediaQuery,
     AppBar, 
     Toolbar, 
     Box,
@@ -13,8 +13,8 @@ import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import AddIcon from '@mui/icons-material/Add'
 
-import SearchBar from './SearchBar'
-import MobileBottomNav from './MobileBottomNav'
+import SearchBar from '../SearchBar/SearchBar'
+import MobileBottomNav from '../MobileBottomNavigation/MobileBottomNav'
 
 export default function Layout() {
     const theme = useTheme()
@@ -25,7 +25,9 @@ export default function Layout() {
 
     if (!isMobile) {return (
         null
-    )} else {return (
+    )} 
+
+    return (
         <>
             <Box>
                 <AppBar 
@@ -64,4 +66,3 @@ export default function Layout() {
             <MobileBottomNav />
         </>
     )}
-}

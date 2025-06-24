@@ -1,19 +1,18 @@
 import { useState, useEffect } from 'react'
 
-import { TextField } from '@mui/material'
-import { InputAdornment } from '@mui/material'
+import {
+    useTheme,
+    useMediaQuery,
+    TextField,
+    InputAdornment,
+} from '@mui/material'
 import { SearchOutlined } from '@mui/icons-material'
 
 export default function SearchBar({ placeholder = 'Поиск...', onSearch }) {
-    const [isMobile, setIsMobile] = useState(false)
-
-    useEffect(() => {
-        const mediaQuery = window.matchMedia('(max-width: 780px)')
-        const handler = (e) => setIsMobile(e.matches)
-        handler(mediaQuery)
-        mediaQuery.addEventListener('change', handler)
-        return () => mediaQuery.removeEventListener('change', handler)
-    }, [])
+    const theme = useTheme()
+        const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
+        const [searchTerm, setSearchTerm] = useState('')
+        const handleSearch = (term) => {setSearchTerm(term)}
 
     return (
         <TextField 
