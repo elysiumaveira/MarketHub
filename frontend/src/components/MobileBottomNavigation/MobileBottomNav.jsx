@@ -20,35 +20,41 @@ export default function MobileBottomNav() {
     const theme = useTheme()
     const isMobile = useMediaQuery(theme.breakpoints.down('sm'))
 
-    if (!isMobile) return null 
+    if (!isMobile) return null
 
     return (
         <CustomBottomNavigation value={value} onChange={(event, value) => {setValue(newValue)}} showLabels>
+
                 <CustomBottomNavigationAction
                     label='Главная'
-                    icon={<HomeIcon fontSize='large' />}
+                    icon={<HomeIcon />}
                     onClick={()=>navigate('/')}
                 />
+
                 <CustomBottomNavigationAction
                     label='Избранное'
-                    icon={<FavoriteIcon fontSize='large' />}
+                    icon={<FavoriteIcon />}
                     onClick={()=>navigate('/')}
                 />
+
                 <CustomBottomNavigationAction
                     label='Мои объяв.'
-                    icon={<MenuIcon fontSize='large' />}
+                    icon={<MenuIcon />}
                     onClick={()=>navigate('/')}
                 />
+
                 <CustomBottomNavigationAction
                     label='Сообщения'
-                    icon={<TextsmsIcon fontSize='large' />}
+                    icon={<TextsmsIcon />}
                     onClick={()=>navigate('/')}
                 />
+
                 <CustomBottomNavigationAction
                     label='Профиль'
-                    icon={<PersonIcon fontSize='large' />}
+                    icon={<PersonIcon />}
                     onClick={() => navigate('/')}
                 />
+
         </CustomBottomNavigation>
     )
 }
