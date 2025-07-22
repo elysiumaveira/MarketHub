@@ -7,12 +7,14 @@ import {
     AppBar, 
     Toolbar, 
     Box,
+    Container,
 } from '@mui/material'
 import IconButton from '@mui/material/IconButton'
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart'
 import NotificationsIcon from '@mui/icons-material/Notifications'
 import AddIcon from '@mui/icons-material/Add'
 
+import ResponsiveAppBar from '../ResponsiveAppBar/ResponsiveAppBar'
 import SearchBar from '../SearchBar/SearchBar'
 import MobileBottomNav from '../MobileBottomNavigation/MobileBottomNav'
 
@@ -24,40 +26,38 @@ export default function Layout() {
     const handleSearch = (term) => {setSearchTerm(term)}
 
     if (!isMobile) {return (
-        null
+        <ResponsiveAppBar />
     )} 
 
     return (
         <>
-            <Box>
-                <AppBar 
+            <Container maxWidth="sm" sx={{padding: 0}}>
+                <AppBar
                     position='static'
                     elevation={0}
                     sx={{
                         backgroundColor: 'transparent'
                     }}
                 >
-                    <Toolbar sx={{padding:0}}>
-                        <Box>
-                            <SearchBar onSearch={handleSearch} />
-                        </Box>
-                        
-                        <Box sx={{marginLeft: 6}}>
-                            <IconButton aria-label='ShoppingCart' onClick={()=>navigate('/')}>
-                                <ShoppingCartIcon />
-                            </IconButton>
+                    <Toolbar>
 
-                            <IconButton aria-label='Notifications' onClick={()=>navigate('/')}>
-                                <NotificationsIcon />
-                            </IconButton>
+                        <SearchBar onSearch={handleSearch} />
 
-                            <IconButton aria-label='CreateAListing' onClick={()=>navigate('/')}>
-                                <AddIcon />
-                            </IconButton>
-                        </Box>
+                        <IconButton aria-label='ShoppingCart' onClick={()=>navigate('/')}>
+                            <ShoppingCartIcon />
+                        </IconButton>
+
+                        <IconButton aria-label='Notifications' onClick={()=>navigate('/')}>
+                            <NotificationsIcon />
+                        </IconButton>
+
+                        <IconButton aria-label='CreateAListing' onClick={()=>navigate('/')}>
+                            <AddIcon />
+                        </IconButton>
+
                     </Toolbar>
                 </AppBar>
-            </Box>
+            </Container>
             
             <Box>
                 <Outlet />
