@@ -3,13 +3,13 @@ import { BottomNavigation } from '@mui/material'
 
 const CustomBottomNavigation = styled(BottomNavigation)(({theme})=>({
     position: 'fixed',
-    bottom: 0,
-    left: 0,
-    right: 0,
+    bottom: '0px',
+    left: '0px',
+    right: '0px',
     zIndex: 1100,
     backgroundColor: 'background.paper',
     borderTop: '1px solid rgba(0, 0, 0, 0.1)',
-    height: 66,
+    height: '66px',
     width: '100%'
 }))
 
