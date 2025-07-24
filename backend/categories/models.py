@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.utils.text import slugify
+from slugify import slugify
 
 
 class MainCategory(models.Model):
@@ -21,9 +21,16 @@ class MainCategory(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.name)
+            base_slug = slugify(self.name)
+            if not base_slug:
+                base_slug = 'uncategorized'
+            self.slug = base_slug
 
         super().save(*args, **kwargs)
+
+    @property
+    def full_path(self):
+        return self.name
 
 
 class SubCategory(models.Model):
@@ -52,7 +59,10 @@ class SubCategory(models.Model):
 
     def save(self, *args, **kwargs):
         if not self.slug:
-            self.slug = slugify(self.name)
+            base_slug = slugify(self.name)
+            if not base_slug:
+                base_slug = 'uncategorized'
+            self.slug = base_slug
 
         super().save(*args, **kwargs)
 
