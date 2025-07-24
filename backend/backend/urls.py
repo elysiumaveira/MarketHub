@@ -1,22 +1,23 @@
-"""
-URL configuration for backend project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/5.2/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
 from django.urls import path
+from rest_framework.routers import DefaultRouter
+
+from categories.views import (
+    MainCategoryReadView, 
+    MainCategoryCreateView,
+    SubCategoryReadView,
+    SubCategoryCreateView,
+)
+
+
+router = DefaultRouter()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+
+    #Categories
+    path('main-categories/', MainCategoryReadView.as_view(), name='Main categories'),
+    path('main-category-create/', MainCategoryCreateView.as_view(), name='Create main category'),
+    path('sub-categories/', SubCategoryReadView.as_view(), name='Sub categories'),
+    path('sub-category-create/', SubCategoryCreateView.as_view(), name='Create sub category'),
 ]
