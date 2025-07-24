@@ -5,10 +5,16 @@ from .models import MainCategory, SubCategory
 class MainCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = MainCategory
-        fields = '__all__'
+        fields = ['id', 'name', 'slug','is_active']
+        extra_kwargs = {
+            'slug': {'required': False}
+        }
 
 
 class SubCategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = SubCategory
-        fields = '__all__'
+        fields = ['id', 'name', 'slug','is_active']
+        extra_kwargs = {
+            'slug': {'required': False}
+        }
