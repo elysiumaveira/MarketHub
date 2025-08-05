@@ -26,7 +26,7 @@ I use a powerful combination of modern web technologies to ensure high performan
 
 ### 🔹 Backend (Django)
 - Framework: Django + Django REST Framework (DRF)
-- Database: (I'm looking at the best fit)
+- Database: PostgreSQL
 - Authentication: (I'm looking at the best fit)
 - API Documentation: (I'm looking at the best fit)
 - Deployment: (I'm looking at the best fit)
