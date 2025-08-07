@@ -60,6 +60,8 @@ wheels/
 venv/
 env/
 ENV/
+*.key
+*.pem
 
 # Django specific
 db.sqlite3
